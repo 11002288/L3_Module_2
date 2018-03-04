@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 
 public class encrypt {
 public static void main(String[] args) {
+String decrypt = "";
 String crypt = "";
 String message = JOptionPane.showInputDialog("Type message you want encrypted");
 
@@ -16,17 +17,20 @@ crypt+= " ";
 }
 String[] part = crypt.split(" ");
 System.out.println(part);
+JOptionPane.showMessageDialog(null, crypt);
 for (int i = 0; i < part.length; i++) {
 	System.out.println(part[i]);
 	int sum = Integer.parseInt(part[i])-1;
 	String var = Character.toString((char)sum);
-	JOptionPane.showMessageDialog(null, var);
+	decrypt = decrypt+var;
 }
+JOptionPane.showMessageDialog(null, decrypt);
 
 //
 
-//Character.toString((char)sum);
-JOptionPane.showMessageDialog(null, crypt);	
+
+//JOptionPane.showMessageDialog(null, crypt);	
+
 
 
 }
